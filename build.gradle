@@ -1,6 +1,7 @@
 plugins {
 	id "base"
-	id "org.jetbrains.kotlin.jvm" apply false // https://youtrack.jetbrains.com/issue/KT-30276
+	id "org.jetbrains.kotlin.jvm" apply false
+	id "org.sonarqube" version "4.4.1.3373"// https://youtrack.jetbrains.com/issue/KT-30276
 }
 
 description = "Spring Boot Build"
@@ -24,9 +25,7 @@ allprojects {
 		resolutionStrategy.cacheChangingModulesFor 0, "minutes"
 	}
 }
-plugins {
-  id "org.sonarqube" version "4.4.1.3373"
-}
+
 
 sonar {
   properties {
